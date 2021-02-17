@@ -1,0 +1,38 @@
+,,,
+MP.7,,,
+,,,
+Key Point Detector,Num Keypoints (avg 10 frame),Processing time (avg 10 frame),Distribution
+Shi-Tomasi,1312,22.23ms,Uniform
+Harris,283,24.92ms,fewer points mostly around upper hald
+FAST,4870,4.87ms,Extremely dense points
+BRISK,2639,27.65ms,Extremely dense with lot of scales
+ORB,500,17.36ms,"Scales seemed like a lot of concentric circle, could be duplicate detections"
+AKAZE,1347,54.509ms,Distribution of points mostly around the edge of the car
+SIFT,1396,84.541ms,Most consistent detection with good distribution around the bounding box
+,,,
+,,,
+,,,
+,,,
+MP.8,,,
+Detector – Descriptor,Matched key points,Descritpor extraction time,
+SIFT- BRIEF,71,0.53ms,
+SIFT – BRISK,64,1.22ms,
+SHITOMASI-BRISK,84,0.97ms,
+SHITOMASI-BRIEF,102,0.69ms,
+SHITOMASI-ORB,103,1.18ms,
+SHITOMASI-FREAK,88,33.1ms,
+AKAZE-AKAZE,151,35.1ms,
+BRISK-BRISK,174,2.06ms,
+AKAZE-BRISK,132,1.34ms,
+FAST_BRISK,251,2.85ms,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+Recommendation,,,
+"The most promising real time keypoint detectors are FAST and ORB. SIFT, AKAZE are extermely time-consuming for realtime application. However, on descritor extractor most of them are withim tolerable limits except for AKAZE and FREAK. SO the most optimal combination considering processing speed and number of features matched are FAST-BRISK, FAST-BRIEF, ORB-BRISK",,,
